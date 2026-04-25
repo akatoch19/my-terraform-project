@@ -29,11 +29,15 @@ jobs:
         run: |
           terraform init
           terraform plan -var-file="dev.tfvars" -out=tfplan
-          echo "✅ PLAN COMPLETE - Review above!"
+          echo "✅ PLAN COMPLETE - Ready for approval!"
 
-      - name: 🚀 APPROVAL REQUIRED - Click to Continue
+      - name: 🚀 Manual Approval
         if: github.ref == 'refs/heads/main'
         uses: trstringer/manual-approval@v1
+        with:
+          secret: ${{ github.TOKEN }}
+          approvers: ${{ github.actor }}
+          minimum-approvals: 1
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main'
