@@ -1,0 +1,15 @@
+Name:   Bama Kinaka Olga Bongkiyung
+
+GitHub: https://github.com/BamaOlga
+
+Branch: feature/Olga
+
+Date:   27/04/2026
+
+What I learned about Git today:
+Today, I learned how to fork a GitHub repository and clone it to my local machine. 
+I also explored the repository and understood its structure. 
+In addition, I created my own branch and checked the project status.
+
+The Git command I found most useful:
+git status because it shows the current branch and tells me whether there are changes to commit or whether my working tree is clean.
