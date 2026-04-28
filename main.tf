@@ -16,7 +16,7 @@ resource "aws_instance" "myec2" {
 /*resource "aws_iam_user" "team" {
   for_each = toset(["Hilary", "Made", "Cynthia", "Celestine","Arvind"])
   name     = each.value
-}
+}*/
 
 
 
@@ -34,7 +34,7 @@ locals {
 }
 
 
-module "app_data" {
+/*module "app_data" {
   source      = "./modules/s3-bucket"
   bucket_name = "my-app-data-2026-celestine"
   tags        = { Project = "MyApp-dev" }
