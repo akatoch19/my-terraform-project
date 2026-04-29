@@ -38,7 +38,7 @@ jobs:
     needs: plan                      # This makes 'apply' wait for 'plan' to finish
     runs-on: ubuntu-latest
     environment: production          # <--- THIS triggers the approval button
-    #if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
 
     steps:
       - name: Checkout code
