@@ -1,5 +1,5 @@
-region_n_virginia = "us-east-1"
+region_n_virginia = "us-east-2"
 instance_type     = "t2.micro"
-ami_id            = "ami-0fa3fe0fa7920f68e"
+ami_id            = "ami-001dfc1bc335f7413"
 #profile           = "arvind"
 env_name          = "production"
