@@ -1,0 +1,10 @@
+Name:         [Hilary Tebi Tateh]
+GitHub:       [HT-Tateh]
+Branch:       feature/[Hilary]
+Date:         [04/25/2026]
+ 
+What I learned about Git today:
+[I learned that Git allows multiple developers to to write their codes without overwriting each other."main branch" also indicates that I haven't push or commit my codes to GIT]
+ 
+The Git command I found most useful:
+[git status "to see my available files"]
