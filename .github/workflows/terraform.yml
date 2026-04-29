@@ -6,11 +6,11 @@ on:
       environment:
         description: 'Select the environment to deploy to'
         required: true
-        default: 'dev'
+        default: 'DEV'
         type: choice
         options:
-          - dev
-          - prod
+          - DEV
+          - PROD
 jobs:
   plan:
     name: Terraform Plan
@@ -25,8 +25,8 @@ jobs:
       - name: Setup AWS & Terraform
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID_${{ github.event.inputs.environment }} }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_${{ github.event.inputs.environment }} }}
           aws-region: us-east-1
 
       - name: Setup Terraform
@@ -52,8 +52,8 @@ jobs:
       - name: Setup AWS & Terraform
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID_${{ github.event.inputs.environment }} }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_${{ github.event.inputs.environment }} }}
           aws-region: us-east-1
 
       - name: Setup Terraform
